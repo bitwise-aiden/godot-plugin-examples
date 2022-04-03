@@ -8,10 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "TCP_Server",
+"class": "HTTPServer",
+"language": "GDScript",
+"path": "res://addons/http_server/http_server.gd"
+} ]
+_global_script_class_icons={
+"HTTPServer": ""
+}
+
 [application]
 
 config/name="stream-comment"
 config/icon="res://icon.png"
+
+[autoload]
+
+StreamComment="*res://addons/stream_comment/stream_comment.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/example/plugin.cfg", "res://addons/http_server/plugin.cfg", "res://addons/stream_comment/plugin.cfg" )
 
 [physics]
 
